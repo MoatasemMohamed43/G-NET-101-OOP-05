@@ -1,7 +1,6 @@
 ﻿namespace G_NET_101_OOP_05
 {
-    internal partial class Program
-    {
+  
         #region ExpressShipment
         #endregion
 
@@ -75,10 +74,7 @@
                 return EstimatedCost * 0.12m;
             }
 
-            public string GetTrackingStatus()
-            {
-                return $"Shipment {TrackingCode} has been Delivered.";
-            }
+           
 
             public InternationalShipment(
                 string trackingCode,
@@ -108,5 +104,5 @@
 
             }
         }
-    }
+    
 }

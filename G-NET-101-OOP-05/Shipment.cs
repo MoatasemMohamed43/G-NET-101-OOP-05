@@ -1,8 +1,7 @@
 ﻿namespace G_NET_101_OOP_05
 {
-    internal partial class Program
-    {
-        abstract class Shipment
+  
+        abstract partial class Shipment
         {
             private string trackingCode;
             private string description;
@@ -17,17 +16,7 @@
 
             public abstract Shipment DeepCopy();
 
-            private string trackingStatus = "Ready";
-
-            public string TrackingStatus
-            {
-                get { return trackingStatus; }
-                set
-                {
-                    if (!string.IsNullOrWhiteSpace(value))
-                        trackingStatus = value;
-                }
-            }
+            
 
 
 
@@ -91,7 +80,10 @@
                 Description = "Unknown";
                 Weight = 1;
                 DeliveryFee = 50;
-            }
+
+
+                totalShipmentsCreated++;
+        }
 
             public Shipment(
                 string trackingCode,
@@ -111,6 +103,7 @@
                 Weight = weight;
                 DeliveryFee = deliveryFee;
                 Destination = destination;
+                totalShipmentsCreated++;
             }
 
             private static int totalShipmentsCreated;
@@ -118,8 +111,8 @@
             static Shipment()
             {
                 totalShipmentsCreated = 0;
-                Console.WriteLine("Shipment class initialized.");
-            }
+                Console.WriteLine("Shipment System Initialized");
+        }
 
 
             public void UpdateDeliveryFee(decimal newFee)
@@ -147,6 +140,11 @@
                 return totalShipmentsCreated;
             }
 
-        }
+            partial void OnTrackingStatusChanged(string newStatus)
+            {
+                Console.WriteLine($"Tracking status changed to: {newStatus}");
+            }
+
     }
+    
 }

@@ -1,10 +1,7 @@
 ﻿namespace G_NET_101_OOP_05
 {
-    internal partial class Program
+    interface ITrackable
     {
-        interface ITrackable
-        {
-            string GetTrackingStatus();
-        }
+        string GetTrackingStatus();
     }
 }

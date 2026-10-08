@@ -1,12 +1,11 @@
 ﻿namespace G_NET_101_OOP_05
 {
-    internal partial class Program
-    {
+    
         static class DeliveryUtilities
         {
             public static void PrintSeparator()
             {
-                Console.WriteLine("======================================");
+                Console.WriteLine(new string('=', 30));
             }
 
             public static void PrintSystemTitle()
@@ -16,5 +15,5 @@
                 PrintSeparator();
             }
         }
-    }
+    
 }

@@ -1,7 +1,6 @@
 ﻿namespace G_NET_101_OOP_05
 {
-    internal partial class Program
-    {
+    
         static class ShipmentExtensions
         {
             public static string GetSummary(this Shipment shipment)
@@ -15,5 +14,5 @@
                 return shipment.TrackingStatus == "Delivered";
             }
         }
-    }
+    
 }

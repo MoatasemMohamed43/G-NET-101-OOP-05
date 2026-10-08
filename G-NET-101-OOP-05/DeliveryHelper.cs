@@ -1,7 +1,6 @@
 ﻿namespace G_NET_101_OOP_05
 {
-    internal partial class Program
-    {
+   
         #region InternationalShipment
         #endregion
 
@@ -12,5 +11,5 @@
                 shipment.PrintShipment();
             }
         }
-    }
+    
 }

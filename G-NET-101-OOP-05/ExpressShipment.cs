@@ -1,7 +1,6 @@
 ﻿namespace G_NET_101_OOP_05
 {
-    internal partial class Program
-    {
+   
         #region StandardShipment class
 
         #endregion
@@ -60,10 +59,7 @@
                 return EstimatedCost * 0.08m;
             }
 
-            public string GetTrackingStatus()
-            {
-                return $"Shipment {TrackingCode} is Out for Delivery.";
-            }
+            
 
             public ExpressShipment(
                 string trackingCode,
@@ -89,5 +85,5 @@
                 Console.WriteLine("Estimated Cost: " + EstimatedCost + " EGP");
             }
         }
-    }
+    
 }

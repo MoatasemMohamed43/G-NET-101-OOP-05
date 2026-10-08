@@ -1,7 +1,6 @@
 ﻿namespace G_NET_101_OOP_05
 {
-    internal partial class Program
-    {
+   
         #region Driver class
 
         #endregion
@@ -41,10 +40,7 @@
                     return DeliveryFee + ((decimal)Weight * 5);
                 }
             }
-            public string GetTrackingStatus()
-            {
-                return $"Shipment {TrackingCode} is Ready.";
-            }
+           
             public decimal CalculateInsurance()
             {
                 return EstimatedCost * 0.05m;
@@ -67,5 +63,5 @@
 
 
         }
-    }
+    
 }
